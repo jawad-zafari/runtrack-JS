@@ -1,3 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job 01 - Tailwind</title>
+</head>
+<body>
 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section>
+            <h1>Créer un compte</h1>
+            <form action="index.html" method="POST">
+                
+                <div>
+                    <label>Civilité :</label>
+                    <input type="radio" id="mme" name="civilite" value="Mme">
+                    <label for="mme">Mme</label>
+                    <input type="radio" id="m" name="civilite" value="M.">
+                    <label for="m">M.</label>
+                </div>
 
+                <div>
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div>
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div>
+                    <label for="adresse">Adresse :</label>
+                    <input type="text" id="adresse" name="adresse" required>
+                </div>
+
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div>
+                    <label for="confirm_password">Validation du mot de passe :</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+
+                <div>
+                    <label>Vos passions :</label>
+                    <br>
+                    <input type="checkbox" id="informatique" name="passions" value="informatique">
+                    <label for="informatique">Informatique</label>
+                    
+                    <input type="checkbox" id="voyages" name="passions" value="voyages">
+                    <label for="voyages">Voyages</label>
+                    
+                    <input type="checkbox" id="sport" name="passions" value="sport">
+                    <label for="sport">Sport</label>
+                    
+                    <input type="checkbox" id="lecture" name="passions" value="lecture">
+                    <label for="lecture">Lecture</label>
+                </div>
+
+                <button type="submit">Valider</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">Inscription</a></li>
+            <li><a href="index.html">Connexion</a></li>
+            <li><a href="index.html">Rechercher</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
