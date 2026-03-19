@@ -1,3 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job 03</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen text-gray-800 font-sans">
 
+    <header class="bg-blue-700 text-white shadow-md p-5">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                La Plateforme
+            </div>
+            <ul class="flex space-x-6 font-semibold">
+                <li><a href="index.html" class="hover:text-indigo-200">Accueil</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="flex-grow container mx-auto mt-10 p-6 bg-white rounded-lg shadow-sm">
+        <h1 class="text-2xl font-bold mb-6">Créer un compte</h1>
+        
+        <form action="index.html" method="POST">
+            
+            <div>
+                <label>Civilité :</label>
+                <input type="radio" id="mme" name="civilite" value="Mme">
+                <label for="mme">Mme</label>
+                <input type="radio" id="m" name="civilite" value="M.">
+                <label for="m">M.</label>
+            </div>
+            <br>
 
+            <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <br>
+            <div>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <br>
+            <div>
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <div>
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <br>
+            <div>
+                <label for="confirm_password">Validation du mot de passe :</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <br>
+
+            <div>
+                <label>Vos passions :</label>
+                <br>
+                <input type="checkbox" id="informatique" name="passions" value="informatique">
+                <label for="informatique">Informatique</label>
+                
+                <input type="checkbox" id="voyages" name="passions" value="voyages">
+                <label for="voyages">Voyages</label>
+                
+                <input type="checkbox" id="sport" name="passions" value="sport">
+                <label for="sport">Sport</label>
+                
+                <input type="checkbox" id="lecture" name="passions" value="lecture">
+                <label for="lecture">Lecture</label>
+            </div>
+            <br>
+
+            <button type="submit">Valider</button>
+
+        </form>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-10">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12 font-medium">
+                <li><a href="index.html" class="hover:text-white transition-colors">Accueil</a></li>
+                <li><a href="index.html" class="hover:text-white transition-colors">Inscription</a></li>
+                <li><a href="index.html" class="hover:text-white transition-colors">Connexion</a></li>
+                <li><a href="index.html" class="hover:text-white transition-colors">Rechercher</a></li>
+            </ul>
+            <div class="text-center mt-6 text-sm text-gray-500">
+                &copy; 2026 La Plateforme
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
