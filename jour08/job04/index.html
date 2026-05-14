@@ -8,10 +8,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+    tailwind.config = {
+        darkMode: 'media'
+    }
+    </script>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen text-gray-800 font-sans">
+<body class="bg-gray-50 flex flex-col min-h-screen text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-200">
 
-    <header class="bg-blue-700 text-white shadow-lg p-5">
+    <header class="bg-blue-700 text-white shadow-lg p-5 dark:bg-indigo-900">
         <nav class="container mx-auto flex justify-between items-center">
             <div class="text-2xl font-extrabold tracking-tight">
                 La Plateforme
@@ -24,20 +29,20 @@
 
     <main class="flex-grow container mx-auto mt-12 mb-12 p-4 flex justify-center items-center">
         
-        <section class="bg-white p-10 rounded-2xl shadow-xl w-full max-w-xl border border-gray-100">
+        <section class="bg-white p-10 rounded-2xl shadow-xl w-full max-w-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
             <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Créer un compte</h1>
             
             <form action="index.html" method="POST" class="space-y-6">
                 
-                <div class="flex items-center space-x-6 bg-gray-50 p-4 rounded-xl border border-gray-200">
-                    <span class="font-medium text-gray-700">Civilité :</span>
+                <div class="flex items-center space-x-6 bg-gray-50 p-4 rounded-xl border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+                    <span class="font-medium text-gray-700 dark:text-gray-300">Civilité :</span>
                     <label class="flex items-center cursor-pointer">
-                        <input type="radio" id="mme" name="civilite" value="Mme" class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
-                        <span class="ml-2 text-gray-700">Mme</span>
+                        <input type="radio" id="mme" name="civilite" value="Mme" class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500 dark:bg-gray-600 dark:border-gray-500">
+                        <span class="ml-2 text-gray-700 dark:text-gray-300">Mme</span>
                     </label>
                     <label class="flex items-center cursor-pointer">
-                        <input type="radio" id="m" name="civilite" value="M." class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
-                        <span class="ml-2 text-gray-700">M.</span>
+                        <input type="radio" id="m" name="civilite" value="M." class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500 dark:bg-gray-600 dark:border-gray-500">
+                        <span class="ml-2 text-gray-700 dark:text-gray-300">M.</span>
                     </label>
                 </div>
 
@@ -46,14 +51,14 @@
                         <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                             <i class="fa-regular fa-user text-gray-400"></i>
                         </div>
-                        <input type="text" id="prenom" name="prenom" placeholder="Prénom" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm">
+                        <input type="text" id="prenom" name="prenom" placeholder="Prénom" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400">
                     </div>
                     
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                             <i class="fa-regular fa-id-badge text-gray-400"></i>
                         </div>
-                        <input type="text" id="nom" name="nom" placeholder="Nom" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm">
+                        <input type="text" id="nom" name="nom" placeholder="Nom" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400">
                     </div>
                 </div>
 
@@ -61,14 +66,14 @@
                     <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                         <i class="fa-solid fa-location-dot text-gray-400"></i>
                     </div>
-                    <input type="text" id="adresse" name="adresse" placeholder="Adresse complète" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm">
+                    <input type="text" id="adresse" name="adresse" placeholder="Adresse complète" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400">
                 </div>
 
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                         <i class="fa-regular fa-envelope text-gray-400"></i>
                     </div>
-                    <input type="email" id="email" name="email" placeholder="Adresse email" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm">
+                    <input type="email" id="email" name="email" placeholder="Adresse email" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400">
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -76,40 +81,40 @@
                         <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                             <i class="fa-solid fa-lock text-gray-400"></i>
                         </div>
-                        <input type="password" id="password" name="password" placeholder="Mot de passe" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm">
+                        <input type="password" id="password" name="password" placeholder="Mot de passe" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400">
                     </div>
                     
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                             <i class="fa-solid fa-check-double text-gray-400"></i>
                         </div>
-                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmer mot de passe" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm">
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmer mot de passe" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-11 p-3 transition-colors shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400">
                     </div>
                 </div>
 
-                <div class="bg-indigo-50 p-5 rounded-xl border border-indigo-100">
-                    <p class="font-medium text-indigo-900 mb-3">Vos passions :</p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <label class="flex items-center cursor-pointer hover:bg-indigo-100 p-2 rounded-lg transition-colors">
-                            <input type="checkbox" id="informatique" name="passions" value="informatique" class="w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 rounded focus:ring-indigo-500">
-                            <span class="ml-2 text-sm text-gray-700">Informatique</span>
+                <div class="bg-indigo-50 p-5 rounded-xl border border-indigo-100 dark:bg-indigo-900/30 dark:border-indigo-800 dark:text-gray-300">
+                    <p class="font-medium text-indigo-900 mb-3 dark:text-gray-300">Vos passions :</p>
+                    <div class="grid grid-cols-2 gap-4 ">
+                        <label class="flex items-center cursor-pointer hover:bg-indigo-100 p-2 rounded-lg transition-colors dark:hover:bg-indigo-800">
+                            <input type="checkbox" id="informatique" name="passions" value="informatique" class="w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 rounded focus:ring-indigo-500 dark:bg-gray-600 dark:border-gray-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Informatique</span>
                         </label>
-                        <label class="flex items-center cursor-pointer hover:bg-indigo-100 p-2 rounded-lg transition-colors">
-                            <input type="checkbox" id="voyages" name="passions" value="voyages" class="w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 rounded focus:ring-indigo-500">
-                            <span class="ml-2 text-sm text-gray-700">Voyages</span>
+                        <label class="flex items-center cursor-pointer hover:bg-indigo-100 p-2 rounded-lg transition-colors dark:hover:bg-indigo-800">
+                            <input type="checkbox" id="voyages" name="passions" value="voyages" class="w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 rounded focus:ring-indigo-500 dark:bg-gray-600 dark:border-gray-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Voyages</span>
                         </label>
-                        <label class="flex items-center cursor-pointer hover:bg-indigo-100 p-2 rounded-lg transition-colors">
-                            <input type="checkbox" id="sport" name="passions" value="sport" class="w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 rounded focus:ring-indigo-500">
-                            <span class="ml-2 text-sm text-gray-700">Sport</span>
+                        <label class="flex items-center cursor-pointer hover:bg-indigo-100 p-2 rounded-lg transition-colors dark:hover:bg-indigo-800">
+                            <input type="checkbox" id="sport" name="passions" value="sport" class="w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 rounded focus:ring-indigo-500 dark:bg-gray-600 dark:border-gray-500">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Sport</span>
                         </label>
-                        <label class="flex items-center cursor-pointer hover:bg-indigo-100 p-2 rounded-lg transition-colors">
-                            <input type="checkbox" id="lecture" name="passions" value="lecture" class="w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 rounded focus:ring-indigo-500">
-                            <span class="ml-2 text-sm text-gray-700">Lecture</span>
+                        <label class="flex items-center cursor-pointer hover:bg-indigo-100 p-2 rounded-lg transition-colors dark:hover:bg-indigo-800">
+                            <input type="checkbox" id="lecture" name="passions" value="lecture" class="w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 rounded focus:ring-indigo-500 dark:bg-gray-600 dark:border-gray-500 dark:text-white">
+                            <span class="ml-2 text-sm text-gray-700 dark:text-gray-300  ">Lecture</span>
                         </label>
                     </div>
                 </div>
 
-                <button type="submit" class="w-full text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-xl text-sm px-5 py-3.5 text-center shadow-lg transition-transform transform hover:-translate-y-0.5">
+                <button type="submit" class="w-full text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-xl text-sm px-5 py-3.5 text-center shadow-lg transition-transform transform hover:-translate-y-0.5 dark:bg-indigo-900 dark:hover:bg-indigo-800 dark:focus:ring-indigo-400">
                     Valider l'inscription
                 </button>
 
