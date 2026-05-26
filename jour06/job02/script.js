@@ -19,5 +19,22 @@ document.addEventListener("DOMContentLoaded", function() {
         "C'est dommage qu'elle doive mourir. Mais on en est tous là, non ?"
     ];
 
+    let btnReboot = document.getElementById("btn-reboot"); 
+
+    let jumbotronText = document.querySelector(".p-5 .lead");
+
+    if (btnReboot) { 
+        btnReboot.addEventListener("click", function() {
+            
+            
+            let randomIndex = Math.floor(Math.random() * citations.length);
+            
+            let selectedQuote = citations[randomIndex];
+            
+            jumbotronText.textContent = selectedQuote;
+        });
+    }
+
+
     
 });
