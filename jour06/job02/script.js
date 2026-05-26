@@ -36,5 +36,41 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
+    // --- (Pagination) ---
     
+    const pageContents = [
+        "page 1 : ceci est un exemple de texte pour la première page.",
+        "page 2 : ceci est un exemple de texte pour la deuxième page.",
+        "page 3 : ceci est un exemple de texte pour la troisième page."
+    ];
+
+    let pageLinks = document.querySelectorAll(".page-link");
+
+    pageLinks.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); 
+
+            let text = this.textContent; 
+            
+            if (text === "1") {
+                jumbotronText.textContent = pageContents[0];
+            } else if (text === "2") {
+                jumbotronText.textContent = pageContents[1];
+            } else if (text === "3") {
+                jumbotronText.textContent = pageContents[2];
+            }
+
+           
+            let parentLi = this.parentElement; 
+            
+            let currentActive = document.querySelector(".pagination .active");
+            if (currentActive) {
+                currentActive.classList.remove("active");
+            }
+
+            parentLi.classList.add("active");
+        });
+    });
+
+
 });
