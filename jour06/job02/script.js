@@ -72,5 +72,46 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+//--- Liste de droite ---    
 
+    let listItems = document.querySelectorAll(".list-group-item");
+
+    listItems.forEach(function(item) {
+        item.addEventListener("click", function(event) {
+            event.preventDefault(); 
+
+            let activeItem = document.querySelector(".list-group .active");
+            if (activeItem) {
+                activeItem.classList.remove("active");
+            }
+
+            this.classList.add("active");
+        });
+    });
+
+
+    // (Progress Bar)
+
+    let progressBar = document.querySelector(".progress-bar");
+    
+    let progressValue = 75;
+
+    let btnPlus = document.getElementById("btn-plus");
+    let btnMinus = document.getElementById("btn-minus");
+
+    btnPlus.addEventListener("click", function() {
+        if (progressValue < 100) {
+            progressValue += 5; 
+            progressBar.style.width = progressValue + "%";
+        }
+    });
+
+    btnMinus.addEventListener("click", function() {
+        if (progressValue > 0) {
+            progressValue -= 5; 
+            progressBar.style.width = progressValue + "%";
+        }
+    });
+
+    
 });
