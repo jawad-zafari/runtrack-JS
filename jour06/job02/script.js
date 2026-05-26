@@ -141,5 +141,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+    let form = document.querySelector("form");
     
+    let spinner = document.getElementById("jumbo-spinner");
+    
+    const colors = ["text-primary", "text-secondary", "text-success", "text-danger", "text-warning", "text-info", "text-dark"];
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let emailInput = document.getElementById("exampleInputEmail1");
+        let passInput = document.getElementById("exampleInputPassword1");
+
+        if (emailInput.value !== "" && passInput.value !== "") {
+            
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            spinner.className = "spinner-border ms-3 " + randomColor;
+            
+        } else {
+            alert("Veuillez remplir votre e-mail et votre mot de passe.");
+        }
+    });
 });
