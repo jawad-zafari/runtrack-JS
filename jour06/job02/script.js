@@ -113,5 +113,33 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // (D, G, C)
+    
+    let keySequence = ""; 
+
+    document.addEventListener("keydown", function(event) {
+        
+        keySequence += event.key.toLowerCase();
+
+        if (keySequence.length > 3) {
+            keySequence = keySequence.slice(-3);
+        }
+        if (keySequence === "dgc") {
+            
+            
+            
+            let dgcModal = new bootstrap.Modal(document.getElementById('dgcModal'));
+            
+            let modalText = document.getElementById("modal-content-text");
+            modalText.textContent = "Vous avez découvert le code secret ! (DGC pressed)";
+            
+            dgcModal.show();
+            
+            keySequence = "";
+        }
+    });
+
+
+
     
 });
