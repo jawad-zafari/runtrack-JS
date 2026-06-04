@@ -64,7 +64,7 @@ $(document).ready(function(){
     const winOrder = "1,2,3,4,5,6,7,8,9";
 
     if(currentOrder === winOrder){
-        $("#message").text("Voous avez gagné !").css("color","green");
+        $("#message").text("Vous avez gagné !").css("color","green");
         $("#restart-btn").show();
         gameEnd = true;
 
