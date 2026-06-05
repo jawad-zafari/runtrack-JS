@@ -69,7 +69,7 @@ $(document).ready(function(){
         gameEnd = true;
 
         $(".empty").css("background-image","url('images/9.png')");
-        $("#.empty").css("background-size" , "cover");
+        $(".empty").css("background-size" , "cover");
         $(".empty").removeClass("empty");
     }
    }
